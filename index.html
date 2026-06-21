@@ -1,80 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Foyzur Rahman - Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Foyzur Rahman - Portfolio</title>
+
+<style>
+/* ===== GLOBAL ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+  background:#0b1220;
+  color:#fff;
+  scroll-behavior:smooth;
+}
+
+/* ===== NAVBAR ===== */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 60px;
+  background:rgba(17,24,39,0.8);
+  position:sticky;
+  top:0;
+  backdrop-filter: blur(10px);
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+}
+
+.logo span{
+  color:#38bdf8;
+}
+
+nav ul{
+  display:flex;
+  gap:25px;
+  list-style:none;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:#fff;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:#38bdf8;
+}
+
+/* ===== HERO ===== */
+.hero{
+  height:90vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background: radial-gradient(circle at top,#1e293b,#0b1220);
+  flex-direction:column;
+}
+
+.hero h1{
+  font-size:40px;
+}
+
+.hero h1 span{
+  color:#38bdf8;
+}
+
+.hero p{
+  margin-top:10px;
+  color:#cbd5e1;
+}
+
+.btn{
+  margin-top:20px;
+  padding:12px 25px;
+  background:#38bdf8;
+  color:#000;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+}
+
+/* ===== SECTION ===== */
+section{
+  padding:80px 60px;
+  text-align:center;
+}
+
+h2{
+  margin-bottom:30px;
+  font-size:28px;
+  color:#38bdf8;
+}
+
+/* ===== ABOUT ===== */
+.about p{
+  max-width:700px;
+  margin:auto;
+  color:#cbd5e1;
+  line-height:1.6;
+}
+
+/* ===== SKILLS ===== */
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+}
+
+.skill{
+  background:#1f2937;
+  padding:12px 18px;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.skill:hover{
+  background:#38bdf8;
+  color:#000;
+  transform:translateY(-5px);
+}
+
+/* ===== PROJECTS ===== */
+.projects{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
+
+.card{
+  width:280px;
+  background:#1f2937;
+  padding:20px;
+  border-radius:12px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  background:#111827;
+}
+
+/* ===== CONTACT ===== */
+.contact p{
+  margin:8px 0;
+  color:#cbd5e1;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  padding:20px;
+  text-align:center;
+  background:#111827;
+  margin-top:40px;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <nav>
-    <h2 class="logo">Foyzur<span>Rahman</span></h2>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+<!-- NAV -->
+<nav>
+  <div class="logo">Foyzur <span>Rahman</span></div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-<section id="home" class="hero">
-  <div class="hero-text">
-    <h1>Hello, I'm <span>Foyzur Rahman</span></h1>
-    <p>Pharmacist | Researcher | Bioinformatics Enthusiast</p>
-    <a href="#contact" class="btn">Contact Me</a>
-  </div>
+<!-- HERO -->
+<section class="hero" id="home">
+  <h1>Hello, I'm <span>Foyzur Rahman</span></h1>
+  <p>Pharmacist | Researcher | Bioinformatics Enthusiast</p>
+  <button class="btn" onclick="scrollToContact()">Hire Me</button>
 </section>
 
-<section id="about">
+<!-- ABOUT -->
+<section class="about" id="about">
   <h2>About Me</h2>
   <p>
-    I am a Junior Pharmacist with experience in research, bioinformatics,
-    and molecular drug design. I love exploring science and building impactful solutions.
+    I am a Pharmacist and Researcher with experience in molecular docking,
+    bioinformatics, and pharmaceutical analysis. I love building scientific
+    solutions using technology.
   </p>
 </section>
 
+<!-- SKILLS -->
 <section id="skills">
   <h2>Skills</h2>
-  <div class="skills-container">
+  <div class="skills">
     <div class="skill">HTML</div>
     <div class="skill">CSS</div>
     <div class="skill">JavaScript</div>
     <div class="skill">Bioinformatics</div>
-    <div class="skill">Research Writing</div>
-    <div class="skill">MS Office</div>
+    <div class="skill">Research</div>
+    <div class="skill">Pharmacy</div>
   </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
   <h2>Projects</h2>
+  <div class="projects">
 
-  <div class="project-card">
-    <h3>Molecular Docking Study</h3>
-    <p>In silico drug design and docking analysis for cancer targets.</p>
+    <div class="card">
+      <h3>Molecular Docking</h3>
+      <p>Drug design and binding analysis using in-silico methods.</p>
+    </div>
+
+    <div class="card">
+      <h3>Social Media Study</h3>
+      <p>Research on mental health impact of social media usage.</p>
+    </div>
+
+    <div class="card">
+      <h3>Phytochemical Study</h3>
+      <p>Analysis of medicinal plant compounds and activity.</p>
+    </div>
+
   </div>
-
-  <div class="project-card">
-    <h3>Social Media & Mental Health Survey</h3>
-    <p>Research on impact of social media usage on mental health.</p>
-  </div>
-
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
   <p>Email: foyzur@example.com</p>
   <p>Phone: +8801XXXXXXXXX</p>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 Foyzur Rahman | All Rights Reserved</p>
+  © 2026 Foyzur Rahman | All Rights Reserved
 </footer>
 
-<script src="script.js"></script>
+<script>
+function scrollToContact(){
+  document.getElementById("contact").scrollIntoView({behavior:"smooth"});
+}
+</script>
+
 </body>
 </html>
