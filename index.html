@@ -1,15 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Md. Foyzur Rahman</title>
+  <meta charset="UTF-8">
+  <title>Md Foyzur Rahman | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      padding-top: 120px;
+    }
+
+    h1 {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    .typing {
+      font-size: 22px;
+      color: #38bdf8;
+      height: 30px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #38bdf8;
+      color: black;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: white;
+    }
+
+    .links {
+      margin-top: 20px;
+    }
+
+    a {
+      color: #93c5fd;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>Welcome to My Portfolio</h1>
+  <div class="container">
+    <h1>Md Foyzur Rahman</h1>
 
-<p>This is my first portfolio website.</p>
+    <div class="typing" id="typing"></div>
+
+    <p>Researcher | Pharmacist | Bioinformatician</p>
+
+    <button onclick="window.open('cv.pdf')">📥 Download CV</button>
+
+    <div class="links">
+      <a href="#">LinkedIn</a>
+      <a href="#">Research</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  <script>
+    const text = "Welcome to my Research Portfolio";
+    let i = 0;
+
+    function type() {
+      if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 80);
+      }
+    }
+
+    type();
+  </script>
 
 </body>
-
 </html>
