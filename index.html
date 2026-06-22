@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Md. Foyzur Rahman — Pharmacist & Bioinformatics Researcher</title>
 <meta name="description" content="Portfolio of Md. Foyzur Rahman — registered pharmacist and bioinformatics researcher specializing in in-silico drug design, molecular docking and natural product pharmacology.">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM4QkRGOCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBFNEY3OCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgogIDxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgcng9IjgiIGZpbGw9InVybCgjZykiLz4KICA8dGV4dCB4PSIxNiIgeT0iMjIiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+TUZSPC90ZXh0Pgo8L3N2Zz4=">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="icon" type="image/x-icon" href="WhatsApp Image 2024-08-26 at 11.48.15_1e1a0194.jpg">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  </head>
+
 /* ===== THEME TOKENS ===== */
 :root,[data-theme="dark"]{
-<body>
-  --bg-0:#060C18;
+--bg-0:#060C18;
   --bg-1:#0B1220;
   --bg-2:#111D30;
   --card:#0F192B;
@@ -451,6 +451,23 @@ footer{padding:36px;border-top:1px solid var(--line);position:relative;z-index:2
   .hero-cta .btn{flex:1 1 auto;justify-content:center;}
   .train-table{display:block;overflow-x:auto;}
 }
+
+
+/* === PHOTO FIXES === */
+.photo-ring-inner{
+  overflow:hidden !important;
+  border-radius:50% !important;
+}
+.photo-ring-inner img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center top !important;
+  display:block !important;
+  border-radius:50% !important;
+}
+.photo-placeholder{display:none !important;}
+
 </style>
 </head>
 <body>
@@ -583,17 +600,7 @@ footer{padding:36px;border-top:1px solid var(--line);position:relative;z-index:2
           <circle cx="26" cy="67" r="3" fill="var(--amber)" opacity=".8"/>
         </svg>
         <div class="photo-ring-inner" id="profilePhotoWrap">
-          <!-- Replace src with your actual photo path -->
-        <div class="photo-placeholder">
-    <img src="WhatsApp Image 2024-08-26 at 11.48.15_1e1a0194.jpg" alt="Profile Photo">
-
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <circle cx="12" cy="8" r="4"/>
-        <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-    </svg>
-
-    <span>Upload your photo<br>via the HTML img tag</span>
-</div>
+          <img src="WhatsApp Image 2024-08-26 at 11.48.15_1e1a0194.jpg" alt="Md. Foyzur Rahman" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:50%;">
         </div>
         <span class="orbit-dot" style="top:14%;left:82%;"></span>
         <span class="orbit-dot" style="top:72%;left:10%;"></span>
@@ -1239,3 +1246,4 @@ frame();
 
 </body>
 </html>
+
